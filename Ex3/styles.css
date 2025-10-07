@@ -1,0 +1,160 @@
+/* ✅ Apply background color, body font-size and color */
+:root {
+  --bg: #f5fafc;
+  --text: #1f2a32;
+  --muted: #63727c;
+  --link: #0a8ea0;
+  --link-hover: #055a65; /* ✅ hover color */
+  --accent: #e8f5fb;
+  --border: #d6e9f2;
+  --maxw: 960px;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px; /* ✅ font-size for body */
+  line-height: 1.6;
+}
+
+/* Header */
+.site-header {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1.25rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #ffffff;
+}
+
+.logo {
+  width: 80px; /* ✅ IU logo spot */
+  height: auto;
+  object-fit: contain;
+}
+
+.brand {
+  margin: 0;
+  line-height: 1;
+}
+.brand-top {
+  display: block;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.brand-bottom {
+  display: block;
+  font-weight: 800;
+  font-size: 2rem;
+  color: #d44a3a;
+}
+
+/* Main container */
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+/* Sections */
+.intro h2,
+.specials h3,
+.playlist h3 {
+  color: #1b6f7a;
+}
+
+.guarantee {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.guarantee-badge {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+blockquote {
+  margin: 0;
+}
+
+.elixir {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e9eef1;
+}
+.elixir:last-child {
+  border-bottom: none;
+}
+
+.elixir img {
+  width: 72px;
+  height: 120px;
+  object-fit: cover;
+  background: #fff;
+  border-radius: 4px;
+  border: 1px solid #eef3f6;
+}
+
+.elixir-text h4 {
+  margin: 0 0 0.25rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  max-width: var(--maxw);
+  margin: 2rem auto;
+  padding: 0 1rem 2rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.site-footer .tiny {
+  font-size: 0.8rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .guarantee {
+    grid-template-columns: 48px 1fr;
+  }
+  .guarantee-badge {
+    width: 48px;
+    height: 48px;
+  }
+  .elixir {
+    grid-template-columns: 56px 1fr;
+  }
+  .elixir img {
+    width: 56px;
+    height: 96px;
+  }
+}
